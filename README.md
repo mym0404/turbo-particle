@@ -1,8 +1,9 @@
 # Turbo Particle
 
+Turbo Particle is a Particle package for React Native that runs Particle on both Android and iOS natively and boasts crazy performance of fixing 60FPS no matter what you do.
 
+https://github.com/mym0404/turbo-particle/assets/33388801/6afb82fb-4878-4c38-bdd5-2d179995933c
 
-https://github.com/mym0404/turbo-particle/assets/33388801/0fc77d7c-c337-4317-b474-9a6e3885f22d
 
 
 
