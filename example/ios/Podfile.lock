@@ -1165,7 +1165,7 @@ PODS:
     - React-perflogger (= 0.74.1)
     - React-utils (= 0.74.1)
   - SocketRocket (0.7.0)
-  - weather-effect (0.1.0):
+  - weather-effect (0.1.1-alpha.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1419,7 +1419,7 @@ SPEC CHECKSUMS:
   React-utils: 3285151c9d1e3a28a9586571fc81d521678c196d
   ReactCommon: f42444e384d82ab89184aed5d6f3142748b54768
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  weather-effect: 9d7d74cba310a801febfcb61875168c64c5233f5
+  weather-effect: e555cb309040d7c164ef0bb4da3ce325aa446791
   Yoga: 348f8b538c3ed4423eb58a8e5730feec50bce372
 
 PODFILE CHECKSUM: 4aa9b863fc842ee878a5f5a2af89f0138c24e719
