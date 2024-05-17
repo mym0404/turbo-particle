@@ -1,10 +1,10 @@
 #import <React/RCTUIManager.h>
 #import <React/RCTViewManager.h>
 
-@interface SnowViewManager : RCTViewManager
+@interface TurboParticleViewManager : RCTViewManager
 @end
 
-@implementation SnowViewManager
+@implementation TurboParticleViewManager
 
 RCT_EXPORT_MODULE()
 

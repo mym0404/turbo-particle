@@ -6,4 +6,4 @@ interface NativeProps extends ViewProps {
   speed: Double;
 }
 
-export default codegenNativeComponent<NativeProps>('SnowView');
+export default codegenNativeComponent<NativeProps>('TurboParticleView');

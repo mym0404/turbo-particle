@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "weather-effect": ["./src/index"]
+      "turbo-particle": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

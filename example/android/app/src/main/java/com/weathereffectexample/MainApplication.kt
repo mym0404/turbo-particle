@@ -1,4 +1,4 @@
-package com.weathereffectexample
+package com.turboparticleexample
 
 import android.app.Application
 import com.facebook.react.PackageList

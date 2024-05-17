@@ -1,10 +1,10 @@
 import { StyleSheet, View } from 'react-native';
-import { Snow } from 'weather-effect';
+import { TurboParticle } from 'turbo-particle';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Snow style={styles.box} />
+      <TurboParticle style={styles.box} />
     </View>
   );
 }
@@ -12,12 +12,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    flex: 1,
+    backgroundColor: 'black',
   },
 });

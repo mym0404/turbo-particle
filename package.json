@@ -1,7 +1,7 @@
 {
-  "name": "weather-effect",
+  "name": "turbo-particle",
   "version": "0.1.1-alpha.0",
-  "description": "Weather Effect Components for React Native",
+  "description": "High-Performance Particle Components including Weather Effects for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace weather-effect-example",
+    "example": "yarn workspace turbo-particle-example",
     "dev": "yarn example start",
     "test": "jest",
     "typecheck": "tsc --noEmit",
@@ -39,10 +39,10 @@
     "codegen:ios": "react-native codegen --path example/ --outputPath example/ios",
     "codegen": "yarn codegen:android && yarn codegen:ios",
     "studio": "studio $(pwd)/example/android",
-    "xcode": "xed $(pwd)/example/ios/WeatherEffectExample.xcworkspace",
+    "xcode": "xed $(pwd)/example/ios/TurboParticleExample.xcworkspace",
     "pod": "cd example/ios && bundle install && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
     "prepack": "bob build",
-    "ci:ios": "cd example/ios && xcodebuild -workspace WeatherEffectExample.xcworkspace -scheme WeatherEffectExample -configuration Debug -sdk iphonesimulator -quiet CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO ONLY_ACTIVE_ARCH=YES",
+    "ci:ios": "cd example/ios && xcodebuild -workspace TurboParticleExample.xcworkspace -scheme TurboParticleExample -configuration Debug -sdk iphonesimulator -quiet CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO ONLY_ACTIVE_ARCH=YES",
     "ci:android": "cd example/android && ./gradlew assembleDebug",
     "turbo:android": "yarn turbo ci:android --single-package --cache-dir=\".turbo/android\"",
     "turbo:ios": "yarn turbo ci:ios --single-package --cache-dir=\".turbo/ios\""
@@ -54,14 +54,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mym0404/weather-effect.git"
+    "url": "git+https://github.com/mym0404/turbo-particle.git"
   },
   "author": "mym0404 <mym0404@gmail.com> (https://github.com/mym0404)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mym0404/weather-effect/issues"
+    "url": "https://github.com/mym0404/turbo-particle/issues"
   },
-  "homepage": "https://github.com/mym0404/weather-effect#readme",
+  "homepage": "https://github.com/mym0404/turbo-particle#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -141,8 +141,8 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNWeatherEffectViewSpec",
-    "type": "components",
-    "jsSrcsDir": "src"
+    "name": "TurboParticleViewSpec",
+    "type": "all",
+    "jsSrcsDir": "src/spec"
   }
 }
