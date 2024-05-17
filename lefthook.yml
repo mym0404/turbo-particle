@@ -1,14 +1,49 @@
 pre-commit:
   parallel: true
   commands:
-    lint:
+    lint:js:
       glob: "*.{js,ts,jsx,tsx}"
-      run: npx eslint {staged_files}
-    types:
-      glob: "*.{js,ts, jsx, tsx}"
-      run: npx tsc --noEmit
-commit-msg:
+      run: yarn eslint --cache --max-warnings=0 {staged_files}
+    lint:objc:
+      glob: "*.{h,mm,m,hpp,cpp,c}"
+      run: bash ./script/clang-lint.sh {staged_files}
+    lint:kotlin:
+      glob: "*.kt"
+      run: bash ./script/ktlint-lint.sh {staged_files}
+    typecheck:
+      glob: "*.{ts,tsx}"
+      run: yarn tsc --noEmit
+
+format:
   parallel: true
   commands:
+    format:objc:
+      glob: "*.{h,mm,m,hpp,cpp,c}"
+      run: bash ./script/clang-format.sh {all_files}
+    format:kotlin:
+      glob: "*.kt"
+      run: bash ./script/ktlint-format.sh {all_files}
+
+check:
+  parallel: true
+  commands:
+    lint:js:
+      glob: "*.{js,ts,jsx,tsx}"
+      run: yarn eslint --cache --max-warnings=0 {all_files}
+    lint:objc:
+      glob: "*.{h,mm,m,hpp,cpp,c}"
+      run: bash ./script/clang-lint.sh {all_files}
+    lint:kotlin:
+      glob: "*.kt"
+      run: bash ./script/ktlint-lint.sh {all_files}
+    typecheck:
+      glob: "*.{ts,tsx}"
+      run: yarn tsc --noEmit
+    build:
+      run: yarn prepack
+
+
+commit-msg:
+  commands:
     commitlint:
-      run: npx commitlint --edit
+      run: npx --no-install commitlint --edit

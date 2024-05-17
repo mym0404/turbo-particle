@@ -6,11 +6,12 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
-import com.facebook.react.viewmanagers.WeatherEffectViewManagerInterface
 import com.facebook.react.viewmanagers.WeatherEffectViewManagerDelegate
+import com.facebook.react.viewmanagers.WeatherEffectViewManagerInterface
 
 @ReactModule(name = WeatherEffectViewManager.NAME)
-class WeatherEffectViewManager : SimpleViewManager<WeatherEffectView>(),
+class WeatherEffectViewManager :
+  SimpleViewManager<WeatherEffectView>(),
   WeatherEffectViewManagerInterface<WeatherEffectView> {
   private val mDelegate: ViewManagerDelegate<WeatherEffectView>
 
@@ -31,7 +32,10 @@ class WeatherEffectViewManager : SimpleViewManager<WeatherEffectView>(),
   }
 
   @ReactProp(name = "color")
-  override fun setColor(view: WeatherEffectView?, color: String?) {
+  override fun setColor(
+    view: WeatherEffectView?,
+    color: String?,
+  ) {
     view?.setBackgroundColor(Color.parseColor(color))
   }
 
