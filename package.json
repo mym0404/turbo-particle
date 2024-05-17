@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace @mj-studio/react-native-naver-map-example",
+    "example": "yarn workspace weather-effect-example",
     "dev": "yarn example start",
     "test": "jest",
     "typecheck": "tsc --noEmit",
@@ -39,10 +39,10 @@
     "codegen:ios": "react-native codegen --path example/ --outputPath example/ios",
     "codegen": "yarn codegen:android && yarn codegen:ios",
     "studio": "studio $(pwd)/example/android",
-    "xcode": "open $(pwd)/example/ios/NaverMapExample.xcworkspace",
+    "xcode": "xed $(pwd)/example/ios/WeatherEffectExample.xcworkspace",
     "pod": "cd example/ios && bundle install && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install",
     "prepack": "bob build",
-    "ci:ios": "cd example/ios && xcodebuild -workspace NaverMapExample.xcworkspace -scheme NaverMapExample -configuration Debug -sdk iphonesimulator -quiet CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO ONLY_ACTIVE_ARCH=YES",
+    "ci:ios": "cd example/ios && xcodebuild -workspace WeatherEffectExample.xcworkspace -scheme WeatherEffectExample -configuration Debug -sdk iphonesimulator -quiet CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO ONLY_ACTIVE_ARCH=YES",
     "ci:android": "cd example/android && ./gradlew assembleDebug",
     "turbo:android": "yarn turbo ci:android --single-package --cache-dir=\".turbo/android\"",
     "turbo:ios": "yarn turbo ci:ios --single-package --cache-dir=\".turbo/ios\""
@@ -84,7 +84,7 @@
     "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
-    "typescript": "^5.2.2"
+    "typescript": "5.1.6"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
@@ -125,36 +125,6 @@
         "preset": "angular"
       }
     }
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
   },
   "react-native-builder-bob": {
     "source": "src",

@@ -1,2 +1,1 @@
-export { default as WeatherEffectView } from './WeatherEffectViewNativeComponent';
-export * from './WeatherEffectViewNativeComponent';
+export * from './view/Snow';

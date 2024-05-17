@@ -1,12 +1,10 @@
-import * as React from 'react';
-
 import { StyleSheet, View } from 'react-native';
-import { WeatherEffectView } from 'weather-effect';
+import { Snow } from 'weather-effect';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <WeatherEffectView color="#32a852" style={styles.box} />
+      <Snow style={styles.box} />
     </View>
   );
 }

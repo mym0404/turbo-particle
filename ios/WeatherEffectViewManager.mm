@@ -1,18 +1,11 @@
-#import "RCTBridge.h"
 #import <React/RCTUIManager.h>
 #import <React/RCTViewManager.h>
 
-@interface WeatherEffectViewManager : RCTViewManager
+@interface SnowViewManager : RCTViewManager
 @end
 
-@implementation WeatherEffectViewManager
+@implementation SnowViewManager
 
-RCT_EXPORT_MODULE(WeatherEffectView)
-
-- (UIView*)view {
-  return [[UIView alloc] init];
-}
-
-RCT_EXPORT_VIEW_PROPERTY(color, NSString)
+RCT_EXPORT_MODULE()
 
 @end
